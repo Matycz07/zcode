@@ -33,6 +33,11 @@ function menudel(){
 }
 // Tady se dává pravda či nepravda
 document.body.addEventListener("keydown",function(e){
+if(e.key === "Control"){
+rr = 0
+p = 0
+zapnout = false
+}
 // Zde se nastavuje přepisování jestli je zapnuty či vypnutý
 if(e.key === "ArrowLeft" && prepisovani === false){
 menu()
@@ -93,7 +98,7 @@ newline = false
 if(bezmezer === true){
 x = document.querySelector(".ql-editor").textContent
 x = x.replaceAll(" ","")
-x = x.replaceAll(" ","")
+x = x.replaceAll(" ","")
 } else if(bezmezer === false){
 x = document.querySelector(".ql-editor").textContent
 }
